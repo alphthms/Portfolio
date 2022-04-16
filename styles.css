@@ -15,13 +15,13 @@
   animation: textTransition 0.4s;
 }
 .main {
-  background-color: #f0e8cf;
+  background-color: #e1dfdd;
 }
 .double {
   background-color: #f7f6f2;
 }
 .triple {
-  background-color: #181818;
+  background-color: #013558;
 }
 #sec-2 {
   background-color: #f7f6f2;
@@ -54,24 +54,39 @@ h4 {
   color: #f74c25;
   font-size: 110px;
   text-align: center;
+  
 }
 
 h5 {
   font-family: Arial, Helvetica, sans-serif;
-  color: #d4d1d1;
+  color: #000000;
   font-size: 15px;
   text-align: center;
 }
 
 h6 {
   text-align: center;
-  color: #eceaea;
+  color: #000000;
   font-weight: 10;
 font-family: 'Playfair Display', serif;  font-size: 1.5rem;
   margin: 3%;
   font-size: 45px;
   line-height: 44px;
   margin-top: 20px;
+}
+
+h7 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #757474;
+  font-size: 110px;
+  text-align: center;
+}
+
+h8 {
+ font-family: 'Shadows Into Light', cursive;
+  color: #ffffff;
+  font-size: 110px;
+  text-align: center;
 }
 
 body {
@@ -146,4 +161,34 @@ section {
   }
 }
 
+img {
+  display: block;
+  margin-right: auto;
+  width: 480px;
+}
 
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #f0e8cf;
+}
+
+.topnav a {
+  font-family: 'Shadows Into Light', cursive;
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: #000000;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #f0e8cf;
+}
