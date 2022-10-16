@@ -1,0 +1,105 @@
+html, body {
+  margin: 0;
+  padding: 0;
+              transition: background 1s ease;
+
+}  
+
+.rotate {
+  animation: rotation 9s infinite linear;
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+      border-radius: 60%;
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.image1 {
+  position: relative;
+  top: 10px;
+  left: 0;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.parent {
+   position: absolute;
+      top: 175px;
+      left: 550px;
+      
+}
+
+.image2 {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  
+  
+}
+
+
+
+
+.container {
+  height: 100vh;
+  padding: 10rem;
+}
+
+
+
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: #1d3830;
+  font-size: 80px;
+  text-align: center;
+  width: 14em;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 69%;
+  left: 50%;
+  transform: translate(-50%) translateY(-130%)
+}
+
+
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #1d3830;
+  font-size: 120px;
+  text-align: center;
+  width: 14em;
+  padding: 0;
+  margin: 0;
+  position:absolute;
+  top: 132%;
+  left: 50%;
+  transform: translate(-50%) translateY(-130%)
+}
+
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  color: #cfd4d3;
+  font-size: 80px;
+  text-align: center;
+  width: 14em;
+  padding: 0;
+  margin: 0;
+  position:absolute;
+  bottom: -110%;
+  left: 50%;
+  transform: translate(-50%) translateY(-130%)
+}
