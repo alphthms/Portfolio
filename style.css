@@ -11,6 +11,8 @@ html, body {
   margin-left: auto;
   margin-right: auto;
       border-radius: 60%;
+    
+
 
 }
 
@@ -31,21 +33,17 @@ html, body {
    display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 100%;
 }
 
 .parent {
-   position: absolute;
-      top: 175px;
-      left: 550px;
-      
-}
-
-.image2 {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  
-  
+    position: relative;
+  top: -800px;
+  left: 0;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 
@@ -53,7 +51,7 @@ html, body {
 
 .container {
   height: 100vh;
-  padding: 10rem;
+  padding: 3rem;
 }
 
 
@@ -61,12 +59,14 @@ html, body {
 
 h1 {
   font-family: 'Roboto', sans-serif;
+  display: block;
   color: #1d3830;
   font-size: 80px;
   text-align: center;
   width: 14em;
   padding: 0;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
   top: 69%;
   left: 50%;
