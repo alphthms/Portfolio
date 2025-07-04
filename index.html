@@ -1,64 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css" />
-
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Alphonse's Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="min-h-screen flex flex-col items-center p-4">
 
-      <div class="container main">
-              <div class="transition-up">
+    <!-- White Overlay for Scroll Effect -->
+    <!-- This div will gradually become opaque as the user scrolls down, covering the gradient. -->
+    <div id="white-overlay" class="fixed inset-0 bg-white opacity-0 z-10 pointer-events-none"></div>
 
-            <h1>Portfolio</h1>
-                  </div>
+    <!-- Navigation Bar -->
+    <!-- Ensure navigation is above the overlay -->
+    <nav class="w-full max-w-4xl flex justify-between items-center py-4 px-6 md:px-0 relative z-20">
+        <div class="flex space-x-6">
+            <a href="#" class="text-white hover:text-gray-400 font-medium">home</a>
+            <a href="#" class="text-white hover:text-gray-400 font-medium">projects</a>
+            <a href="#" class="text-white hover:text-gray-400 font-medium">blog</a>
+            <a href="#" class="text-white hover:text-gray-400 font-medium">contact</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <!-- Placeholder for theme toggle / settings icon -->
+            <button class="text-white hover:text-gray-400 focus:outline-none">
+                <i class="fas fa-sun"></i> <!-- Example icon -->
+            </button>
+            <button class="text-white hover:text-gray-400 focus:outline-none">
+                <i class="fas fa-ellipsis-h"></i> <!-- Example icon -->
+            </button>
+        </div>
+    </nav>
 
-      <div class="outline">
-       <div class="object">
-        <a href="https://github.com/alphthms"><img src="github.png" class="button3" ></a>
+    <!-- Main Content Area -->
+    <!-- Ensure main content is above the overlay -->
+    <main class="w-full max-w-4xl mt-8 p-4 md:p-0 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <!-- Left Column: Intro and Bio -->
+            <div class="md:col-span-2">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi Alphonse here. <span class="text-4xl">👋</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-6">
+                    18yrs old Software Engineer from UK <br>
+                    Degree Aprentice
+                </p>
+                <div class="flex items-center mb-6">
+                    <!-- Original text "For Q&A, raise a ticket with Ted Support" removed based on user's code -->
+                </div>
+                <p class="text-gray-300 mb-8">
+                    For escalations, please find my contacts.
+                </p>
+                <div class="flex space-x-6">
+                    <!-- Updated href and added download attribute for the resume -->
+                    <!-- IMPORTANT: For this to work in your VS Code Live Server,
+                         you need to save your CV file (e.g., named 'June alphonse CV.pdf')
+                         in the same folder as your HTML file. -->
+                    <a href="June alphonse CV.pdf" download class="flex items-center text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-lg font-semibold">
+                        Resume <i class="fas fa-download ml-2"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alphonse-thomas-944b81293/" target="_blank" class="text-white hover:text-gray-400 text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/alphthms" target="_blank" class="text-white hover:text-gray-400 text-2xl">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:alphonsethom81@gmail.com" class="text-white hover:text-gray-400 text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
 
-        <div class="object2">
-        <a href="https://www.instagram.com/alphthms/"><img src="insta.png" class="button5" ></a>
+            <!-- Right Column: Profile Image -->
+            <div class="md:col-span-1 flex justify-center md:justify-end">
+                <!-- IMPORTANT: For this to work in your VS Code Live Server,
+                     you need to save the 'linkdn.png' image file
+                     in the same folder as your HTML file. -->
+                <img src="linkdn.png" alt="Profile Picture" class="rounded-full w-64 h-64 object-cover shadow-lg">
+            </div>
+        </div>
 
-        <div class="object3">
-        <a href="https://replit.com/@AlphonseThomas"><img src="replit.png" class="button4" ></a>
+        <!-- Work/Education Tabs -->
+        <div class="mt-16 bg-gray-900 rounded-xl p-8 shadow-lg">
+            <div class="flex border-b border-gray-700 mb-6">
+                <button id="work-tab" class="px-6 py-3 text-lg font-semibold text-white border-b-2 border-transparent hover:border-blue-500 focus:outline-none transition-colors duration-300">Work</button>
+                <button id="education-tab" class="px-6 py-3 text-lg font-semibold text-gray-400 border-b-2 border-transparent hover:border-blue-500 focus:outline-none transition-colors duration-300">Education</button>
+            </div>
 
-          
-       <div class="outline2">
-<img src="archibald.png" class="pic">
+            <!-- Work Content -->
+            <div id="work-content" class="tab-content">
+                <!-- Leonardo - Sep 2025 - Present -->
+                <div class="flex items-start mb-8">
+                    <!-- IMPORTANT: For this to work in your VS Code Live Server,
+                         you need to save the 'leonardo.png' image file
+                         in the same folder as your HTML file. -->
+                    <!-- Added w-12 h-12 classes to make the image a normal size -->
+                    <img src="leonardo.png" alt="Leonardo" class="rounded-full mr-4 mt-1 w-12 h-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Leonardo</h3>
+                        <p class="text-gray-400 text-sm">Sep 2025 - Present</p>
+                        <p class="text-lg text-white mt-1">Software Engineer (Degree Aprentice)</p>
+                        <ul class="list-disc list-inside text-gray-300 ml-4 mt-2 space-y-1" id="leonardo-description">
+                            <li>Work on projects using languages like C++, C#, or Python in an Agile/Scrum team environment.</li>
+                            <li> Study part-time towards a BSc (Hons) in Digital and Technology Solutions while applying learning on real-world defence and aerospace projects.</li>
+                        </ul>
+                        <span class="inline-block bg-blue-600 text-white text-xs px-2 py-1 rounded-full mt-2">Active</span>
+                    </div>
+                </div>
 
-<a href="https://alphthms.github.io/archibald/"><img src="chrome.png" class="button1" ></a>
+                <!-- BAE Systems - Jan 2025 - Jul 2025 -->
+                <div class="flex items-start mb-8">
+                    <img src="BAE-Systems.png" alt="BAE Systems" class="rounded-full mr-4 mt-1 w-12 h-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">BAE Systems</h3>
+                        <p class="text-gray-400 text-sm">Jan 2025 - Jul 2025</p>
+                        <p class="text-lg text-white mt-1">Software Developer (T-Level Placement)</p>
+                        <ul class="list-disc list-inside text-gray-300 ml-4 mt-2 space-y-1" id="bae-systems-description">
+                            <li>Developed software solutions for cyber security at the royal navy base in Portsmouth.</li>
+                            <li>Collaborated with team members to ensure software met high security standards.</li>
+                        </ul>
+                    </div>
+                </div>
 
-<a href="https://github.com/alphthms/archibald"><img src="github.png" class="button2" ></a>
+                <!-- Shaping Portsmouth - Nov 2023 - Aug 2024 -->
+                <div class="flex items-start mb-8">
+                    <img src="shaping.png" alt="Shaping Portsmouth" class="rounded-full mr-4 mt-1 w-12 h-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Shaping Portsmouth</h3>
+                        <p class="text-gray-400 text-sm">Nov 2023 - Aug 2024</p>
+                        <p class="text-lg text-white mt-1">Software Developer (Intern)</p>
+                        <ul class="list-disc list-inside text-gray-300 ml-4 mt-2 space-y-1" id="shaping-portsmouth-description">
+                            <li>Developed React Native apps for LocalLinked, utilizing skills in JavaScript and CSS.</li>
+                            <li>Implemented innovative features to enhance user experience and app functionality.</li>
+                        </ul>
+                    </div>
+                </div>
 
-         
-</div>
+            </div>
 
-          
- <div class="outline3">
-<img src="newweb.png" class="pic">
+            <!-- Education Content (initially hidden) -->
+            <div id="education-content" class="tab-content hidden">
+                <!-- University Of Hertfordshire - Sep 2025 - Present -->
+                <div class="flex items-start mb-8">
+                    <img src="uni.png" alt="University Of Hertfordshire" class="rounded-full mr-4 mt-1 w-12 h-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">University Of Hertfordshire</h3>
+                        <p class="text-gray-400 text-sm">Sep 2025 - Present</p>
+                        <p class="text-lg text-white mt-1">Bachelor of Computing (Software Engineering)</p>
+                        <ul class="list-disc list-inside text-gray-300 ml-4 mt-2 space-y-1" id="hertfordshire-description">
+                            <li>Specialization in Software Engineering and Artificial Intelligence.</li>
+                            <li>Relevant Coursework: Data Structures & Algorithms, Operating Systems, Database Systems, Web Development, Machine Learning.</li>
+                        </ul>
+                    </div>
+                </div>
 
-<a href="https://alphthms.github.io/Newweb/"><img src="chrome.png" class="button1" ></a>
+                <!-- City of Portsmouth College - Sep 2023 - Jul 2025 -->
+                <div class="flex items-start">
+                    <img src="college.jpg" alt="City of Portsmouth College" class="rounded-full mr-4 mt-1 w-12 h-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">City of Portsmouth College</h3>
+                        <p class="text-gray-400 text-sm">Sep 2023 - Jul 2025</p>
+                        <p class="text-lg text-white mt-1">T-Level in Information Technology</p>
+                        <ul class="list-disc list-inside text-gray-300 ml-4 mt-2 space-y-1" id="portsmouth-college-description">
+                            <li>Focused on software development, network security, and database management.</li>
+                            <li>Achieved top performer award for final year project: "App Development".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Added extra space at the bottom to enable scrolling for the gradient effect -->
+        <div class="h-[120vh]"></div>
+    </main>
 
-<a href="https://github.com/alphthms/Newweb"><img src="github.png" class="button2" ></a>
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 
-</div>
-
-<div class="outline4">
-<img src="spotify.png" class="pic">
-
-<a href="https://alphthmspotify.w3spaces.com/"><img src="chrome.png" class="button1" ></a>
-
-<a href="https://github.com/alphthms/spotifyapi"><img src="github.png" class="button2" ></a>
-
-</div>
-
-  <script src="js/main.js"></script>          
-          
-          
 </body>
 </html>
-

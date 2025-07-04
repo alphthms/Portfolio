@@ -1,243 +1,28 @@
+/* style.css */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.WebContainer {
-  width: 100%;
-  height: auto;
-}
-
-html {
-  scroll-behavior: smooth;
+body {
+    font-family: 'Inter', sans-serif;
+    /* Changed background-color to a linear gradient with navy blue tones */
+    background: linear-gradient(to bottom right, #030712, #1a202c, #2c3e50); /* Dark navy to a slightly lighter blue-gray */
+    color: #fff; /* White text */
+    min-height: 100vh; /* Ensure the gradient covers the full viewport height */
 }
 
-.container {
-  height: 500vh;
-  padding: 14rem;
-  
-}
-.transition-up {
-  animation: textTransition 0.4s;
-
-}
-.main {
-  background-color: #111114;
-  
-}
-
-.triple {
-  background-color: #ff9b0e;
-}
-
-.object {
-  
-    display: flex;
-    border-radius: 2rem;
-    background:#585858;
-    width:300px;
-    height:300px; 
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    margin-top: -145px;
-    margin-left: -140px;
-}
-
-.object2 {
-  
-    display: flex;
-    border-radius: 2rem;
-    background:#f5f5f5;
-    width:300px;
-    height:300px; 
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    margin-top: -145px;
-    margin-left: -550px;
-}
-
-.object3 {
-  
-    display: flex;
-    border-radius: 2rem;
-    background:#f5f5f5;
-    width:300px;
-    height:300px; 
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    margin-top: -155px;
-    margin-left: 640px;
-}
-
-
-
-
-
-
-
-
-.outline {
-    display: flex;
-    border-radius: 2rem;
-    background:#cecdcd;
-    padding: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 23%;
-    position: absolute;
-    margin-top: -100px;
-    margin-left: -150px;
-    height: 400px;
-    width: 70%;
-}
-
-h1{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #d5cdc4;
-  font-size: 130px;
-  text-align: center;
-  margin-top: -130px;
-}
-
-.outline2 {
-    display: flex;
-    border-radius: 4rem;
-    background:#d5cdc4;
-    padding: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 23%;
-    position: absolute;
-    margin-top: 500px;
-    margin-left: -1000px;
-    height: 800px;
-    width: 1400px;
-}
-
-.pic {
-  border-radius: 10px;
-  position: absolute;
-  bottom: 120px;
-  left: 73px;
-  width: 90%;
-  
-
-}
-
-.button1 {
-  position: absolute;
-  width: 5%;
-  bottom: 30px;
-  right: 860px;
-  
-
-}
-
-.button2 {
-  position: absolute;
-  width: 5%;
-  bottom: 30px;
-  right: 460px;
-}
-
-.button3 {
-  position: absolute;
-  width: 100px;
-  bottom: 100px;
-  right: 100px;
-}
-
-.button4 {
-  position: absolute;
-  width: 113px;
-  bottom: 90px;
-  left: 100px;
-}
-
-.button5 {
-  position: absolute;
-  width: 100px;
-  bottom: 100px;
-  left: 100px;
-}
-
-
-
-.outline3 {
-    display: flex;
-    border-radius: 4rem;
-    background:#c8d5d0;
-    padding: 10rem;
-    position: absolute;
-    top: 380%;
-    left: 23%;
-    position: absolute;
-    margin-top: 500px;
-    margin-left: -1000px;
-    height: 800px;
-    width: 1400px;
-}
-
-
-
-#Scrollbar
-
-/* width */
+/* Custom scrollbar for better aesthetics */
 ::-webkit-scrollbar {
-  width: 15px;
+    width: 8px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #181818; 
+    background: #1a1a1a;
+    border-radius: 10px;
 }
- 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #f74c25; 
+    background: #4a4a4a;
+    border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}/* width */
-::-webkit-scrollbar {
-  width: 15px;
+    background: #6a6a6a;
 }
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #181818; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #555; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-}
-
-
-
-.outline4 {
-    display: flex;
-    border-radius: 4rem;
-    background:#322836;
-    padding: 10rem;
-    position: absolute;
-    top: 715%;
-    left: 23%;
-    position: absolute;
-    margin-top: 500px;
-    margin-left: -1000px;
-    height: 800px;
-    width: 1400px;
-}
-
